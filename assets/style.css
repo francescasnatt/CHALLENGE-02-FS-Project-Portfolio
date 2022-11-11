@@ -1,0 +1,14 @@
+:root{}
+
+#projects{
+    display: grid;
+    background-color: pink;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ;
+}
+
+.cards{
+    display: flex;
+    align-content: ;
+}
