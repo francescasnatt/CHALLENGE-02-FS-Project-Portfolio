@@ -1,13 +1,70 @@
-/* :root{} */
+/* :root{
+    nav bar bg #31343D
+    nav bar text #92CCCD
+    background #EDEEF6
+    vertical divider #445877
+    hero text #313641
+    header text #445877
+} */
 
+
+
+/* Nav bar CSS */
+nav{
+    display: flex;
+    flex-direction: row;
+    background-color: #31343D;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+}
+nav h1{
+    /* color: #31343D; */
+    /* background-color: #92CCCD; */
+    font-weight: bold;
+    font-size: 35px;
+    float: left;
+    margin-left: 20px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+nav ul li a{
+text-decoration: none;
+color: #92CCCD;
+font-size: 20px;
+padding: 7px 13px;
+border-radius: 3px;
+}
+
+a:hover{
+    background-color: #777;
+    padding: 5px;
+    transition: .5s;
+}
+
+
+
+
+
+/* Main grid CSS */
 #grid-container{
     display: grid;
     background-color: #eee;
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     grid-template-columns: 25% 75%;
     grid-template-rows: repeat (4, 1fr);
-    grid-template-areas: "HeroBanner HeroBanner"
+    grid-template-areas:
+    "HeroBanner HeroBanner"
     "AboutMeHeading AboutMeContent"
     "MyWorkHeading MyWorkContent"
     "ContactMeHeading ContactMeContent";
@@ -45,51 +102,37 @@
     text-align: right;
 }
 
-
-
-
-
-
-
-    /* gap: 50px;
-    grid-template-areas: "SurfReport"
-    "LEDWall Calculator"
-    "PastelPuzzles RunBuddy";
-    
-    border: 1px solid black;
-}
-
-.cards{
-    border: 2px solid black;
-}
-
-#project1{
-    grid-area: SurfReport;
-    background-image: url("");
-}
-#project2{
-    grid-area: LEDWall;
-    background-image: url("");
-}
-#project3{
-    grid-area: Calculator;
-    background-image: url("");
-}
-#project4{
-    grid-area: PastelPuzzles;
-    background-image: url("");
-}
-#project5{
-    grid-area: RunBuddy;
-    background-image: url("");
-} */
-
 #grid-container div{
     background-color: #ccc;
     padding: 20px;
     border: 1px solid #777;
 }
 
-#grid-containter > div:nth-child(){
-    grid-column: 1 / span 2
+
+/* Nested grid CSS */
+#my-work-content{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60% 20% 20%;
+    grid-template-areas:
+    "SurfReport SurfReport"
+    "LEDWall Calculator"
+    "PastelPuzzles RunBuddy";
+}
+
+#project1{
+    grid-area: SurfReport;
+}
+#project2{
+    grid-area: LEDWall;
+}
+#project3{
+    grid-area: Calculator;
+}
+#project4{
+    grid-area: PastelPuzzles;
+}
+#project5{
+    grid-area: RunBuddy;
 }
