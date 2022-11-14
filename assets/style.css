@@ -1,14 +1,95 @@
-:root{}
+/* :root{} */
 
-#projects{
+#grid-container{
     display: grid;
-    background-color: pink;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: ;
+    background-color: #eee;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: repeat (4, 1fr);
+    grid-template-areas: "HeroBanner HeroBanner"
+    "AboutMeHeading AboutMeContent"
+    "MyWorkHeading MyWorkContent"
+    "ContactMeHeading ContactMeContent";
+}
+
+#hero-banner{
+    grid-area: HeroBanner;
+}
+
+#about-me-heading{
+    grid-area: AboutMeHeading;
+}
+
+#about-me-content{
+    grid-area: AboutMeContent;
+}
+
+#my-work-heading{
+    grid-area: MyWorkHeading;
+}
+
+#my-work-content{
+    grid-area: MyWorkContent;
+}
+
+#contact-me-heading{
+    grid-area: ContactMeHeading;
+}
+
+#contact-me-content{
+    grid-area: ContactMeContent;
+}
+
+.section-heading{
+    text-align: right;
+}
+
+
+
+
+
+
+
+    /* gap: 50px;
+    grid-template-areas: "SurfReport"
+    "LEDWall Calculator"
+    "PastelPuzzles RunBuddy";
+    
+    border: 1px solid black;
 }
 
 .cards{
-    display: flex;
-    align-content: ;
+    border: 2px solid black;
+}
+
+#project1{
+    grid-area: SurfReport;
+    background-image: url("");
+}
+#project2{
+    grid-area: LEDWall;
+    background-image: url("");
+}
+#project3{
+    grid-area: Calculator;
+    background-image: url("");
+}
+#project4{
+    grid-area: PastelPuzzles;
+    background-image: url("");
+}
+#project5{
+    grid-area: RunBuddy;
+    background-image: url("");
+} */
+
+#grid-container div{
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid #777;
+}
+
+#grid-containter > div:nth-child(){
+    grid-column: 1 / span 2
 }
