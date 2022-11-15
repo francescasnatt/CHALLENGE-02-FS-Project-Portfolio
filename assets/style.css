@@ -7,48 +7,52 @@
     header text #445877
 } */
 
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 
-/* Nav bar CSS */
-nav{
+/* Nav bars CSS */
+header nav{
     display: flex;
     flex-direction: row;
     background-color: #31343D;
     height: 100px;
     width: 100%;
     align-items: center;
+    justify-content: space-between;
 }
-nav h1{
-    /* color: #31343D; */
-    /* background-color: #92CCCD; */
+
+header nav h1{
+    color: #31343D;
+    background-color: #92CCCD;
+    padding: 0px 5px 0px 40px;
     font-weight: bold;
     font-size: 35px;
     float: left;
-    margin-left: 20px;
+    margin-left: 0px;
 }
 
-nav ul{
+header nav ul{
     float: right;
     margin-right: 20px;
 }
 
-nav ul li{
+header nav ul li{
     display: inline-block;
     margin: 0 5px;
 }
 
-nav ul li a{
-text-decoration: none;
-color: #92CCCD;
-font-size: 20px;
-padding: 7px 13px;
-border-radius: 3px;
+header nav ul li a{
+    text-decoration: none;
+    color: #92CCCD;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-bottom: 2px solid #92CCCD;
 }
 
-a:hover{
-    background-color: #777;
-    padding: 5px;
-    transition: .5s;
+header nav ul li a:hover{
+    border-bottom: none;
 }
 
 
@@ -60,7 +64,6 @@ a:hover{
     display: grid;
     background-color: #eee;
     width: 100%;
-    margin: 0 auto;
     grid-template-columns: 25% 75%;
     grid-template-rows: repeat (4, 1fr);
     grid-template-areas:
@@ -109,6 +112,24 @@ a:hover{
 }
 
 
+
+
+/* Hero banner CSS */
+#hero-banner{
+    background-image: url(images/02-hero-bg.jpg);
+}
+
+#hero-banner h3{
+    color: #31343D;
+    background-color: #92CCCD;
+    padding: 0px 5px 0px 5px;
+    font-weight: bold;
+    font-size: 25px;
+    float: right;
+    position: relative;
+    top: 30px;
+}
+
 /* Nested grid CSS */
 #my-work-content{
     display: grid;
@@ -123,16 +144,36 @@ a:hover{
 
 #project1{
     grid-area: SurfReport;
+    background-image: url(images/02-portfolio-4.jpg);
 }
 #project2{
     grid-area: LEDWall;
-}
+    background-image: url(images/02-portfolio-1.jpg)
+}   
 #project3{
     grid-area: Calculator;
+    background-image: url(images/02-portfolio-2.jpg)
 }
 #project4{
     grid-area: PastelPuzzles;
+    background-image: url(images/02-portfolio-3.jpg)
 }
 #project5{
     grid-area: RunBuddy;
+    background-image: url(images/02-run-buddy.jpg)
 }
+
+/* My Work CSS styling */
+#my-work-content .cards{
+    border: 4px solid #92CCCD;
+}
+
+#my-work-content .cardTitles{
+    background-color: #92CCCD;
+    padding: 2px 0px 2px 20px;
+    border: none;
+    max-height: 50px;
+    position: relative;
+    bottom: px;
+}
+
