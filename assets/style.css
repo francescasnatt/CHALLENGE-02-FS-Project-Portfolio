@@ -1,11 +1,11 @@
-/* :root{
-    nav bar bg #31343D
-    nav bar text #92CCCD
-    background #EDEEF6
-    vertical divider #445877
-    hero text #313641
-    header text #445877
-} */
+:root{
+    --nav-bar-bg: #31343D;
+    --primary-blue: #92CCCD;
+    --background: #EDEEF6;
+    --vertical-divider: #445877;
+    --hero-text: #313641;
+    --header-text: #445877;
+}
 
 *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -16,7 +16,7 @@
 header nav{
     display: flex;
     flex-direction: row;
-    background-color: #31343D;
+    background-color: var(--nav-bar-bg);
     height: 100px;
     width: 100%;
     align-items: center;
@@ -24,8 +24,8 @@ header nav{
 }
 
 header nav h1{
-    color: #31343D;
-    background-color: #92CCCD;
+    color: var(--nav-bar-bg);
+    background-color: var(--primary-blue);
     padding: 0px 5px 0px 40px;
     font-weight: bold;
     font-size: 35px;
@@ -91,6 +91,7 @@ header nav ul li a:hover{
 
 #my-work-content{
     grid-area: MyWorkContent;
+    min-height: 700px;
 }
 
 #contact-me-heading{
@@ -106,11 +107,18 @@ header nav ul li a:hover{
 }
 
 #grid-container div{
-    background-color: #ccc;
+    background-color: var(--background);
     padding: 20px;
-    border: 1px solid #777;
+    border: 1px solid var(--vertical-divider)
 }
 
+#grid-container h2{
+    color: var(--header-text);
+}
+
+#grid-container p{
+    color: var(--header-text);
+}
 
 
 
@@ -163,17 +171,58 @@ header nav ul li a:hover{
     background-image: url(images/02-run-buddy.jpg)
 }
 
+#my-work-content h4{
+    color: var(--header-text);
+}
+
+#my-work-content p{
+    color: var(--header-text);
+}
+
 /* My Work CSS styling */
 #my-work-content .cards{
     border: 4px solid #92CCCD;
+    position: relative;
 }
 
 #my-work-content .cardTitles{
+    position: absolute;
     background-color: #92CCCD;
-    padding: 2px 0px 2px 20px;
+    padding: 10px 50px 10px 10px;
     border: none;
-    max-height: 50px;
-    position: relative;
-    bottom: px;
+    min-height: 50px;
+    min-width: min-content;
+    left: 0px;
+    bottom: 15px;
 }
 
+#my-work-content .cardTitles h4{
+    position: absolute;
+    bottom: 5px;
+    font-size: 100%;
+}
+
+#my-work-content .cardTitles p{
+    position: absolute;
+    font-size: 70%;
+}
+
+
+/* Contact Me CSS styling */
+footer nav ul li{
+    display: inline;
+    margin: 0 5px;
+    
+}
+
+footer nav ul li a{
+    text-decoration: none;
+    color: #31343D;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-bottom: 2px solid #31343D;
+}
+
+footer nav ul li a:hover{
+    border-bottom: none;
+}
