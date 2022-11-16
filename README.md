@@ -28,4 +28,4 @@ Please refer to the LICENSE in the repo.
 
 ## Link
 
-https://github.com/francescasnatt/CHALLENGE-02-FS-Project-Portfolio
+https://francescasnatt.github.io/CHALLENGE-02-FS-Project-Portfolio/
