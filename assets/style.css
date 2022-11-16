@@ -226,3 +226,18 @@ footer nav ul li a{
 footer nav ul li a:hover{
     border-bottom: none;
 }
+
+/* Responsive layout CSS */
+@media only screen and (max-width: 600px)  {
+    #grid-container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "HeroBanner HeroBanner"
+      "AboutMeHeading"
+      "AboutMeContent"
+      "MyWorkHeading"
+      "MyWorkContent"
+      "ContactMeHeading"
+      "ContactMeContent";
+    }
+    }
